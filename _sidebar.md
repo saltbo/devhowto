@@ -1,3 +1,7 @@
 * [介绍](/)
+
 * 语言
-** [Rust](langs/rust.md)
+** [Go](langs/go.md)
+**  [Rust](langs/rust.md)
+**  [Python](langs/python.md)
+
