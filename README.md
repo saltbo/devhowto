@@ -25,9 +25,3 @@
 
 
 # 参与贡献
-
-
-
-# 贡献者
-
-- [Saltbo](https://github.com/saltbo)

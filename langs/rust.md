@@ -70,87 +70,194 @@ let bytes_slice = &bytes1[1..3];
 
 ```
 
-## 如何定义常量
+## 如何定义常量和全局变量
+
+```rust
+const N: i32 = 5; 
+
+static NAME: &'static str = "Steve";
+```
+
 
 
 ## 如何输出打印
 
 ```rust
 println!(123);
+
+let abc = "hello rust.";
 println!("{:?}", abc)
 ```
 
 ## 如何进行流程控制
 
 ```rust
+// if
+let number = 3;
+if number < 5 {
+  println!("condition was true");
+} else {
+  println!("condition was false");
+}
 
+let condition = true;
+let number = if condition {
+  5
+} else {
+  6
+};
+
+// loop
+let mut counter = 0;
+let result = loop {
+  counter += 1;
+
+  if counter == 10 {
+    break counter * 2;
+  }
+};
+
+println!("The result is {}", result);
+
+// while
+let mut number = 3;
+while number != 0 {
+  println!("{}!", number);
+
+  number = number - 1;
+}
+
+println!("LIFTOFF!!!");
+
+// for
+let a = [10, 20, 30, 40, 50];
+
+for element in a.iter() {
+  println!("the value is: {}", element);
+}
+for number in (1..4).rev() {
+  println!("{}!", number);
+}
 ```
 
 ## 如何定义函数
 
 ```rust
-
+fn function(p: i32) -> i32 {
+  p + 10
+}
 ```
 
-## 如何定义类
+## 如何定义类和方法
 
 ```rust
+struct Rectangle {
+    width: u32,
+    height: u32,
+}
 
+impl Rectangle {
+  	// 方法
+    fn area(&self) -> u32 {
+        self.width * self.height
+    }
+  
+  	// 关联函数
+    fn print123() -> i32 {
+      println!(123);
+    }
+}
+
+fn main() {
+    let rect1 = Rectangle { width: 30, height: 50 };
+
+    println!(
+        "The area of the rectangle is {} square pixels.",
+        rect1.area()
+    );
+    Rectangle::print123();
+}
 ```
 
-## 如何定义方法
+## 如何定义类型别名
 
 ```rust
-
+type byte = u8
 ```
-
-## 如何定义宏
-
-```rust
-
-```
-
-## 如何定义自定义类型
-
-```rust
-
-```
-
-## 如何控制可见性
 
 ## 如何组织代码结构
 
+## 如何控制可见性
 
-
+---
 # 类型转换
 
-## 如何将int转成bytes
+## 如何把数字转换成字符串
+
+
+
+## 如何把字符串转换成数字
+
+
+
+## 如何把字符串转换成Bytes
+
+
+
+## 如何把Bytes转换成字符串
+
+
+
+## 如何将数字转成Bytes
 
 ```rust
-u32::to_be_bytes();
+let bint = 14562;
+println!(bint.to_be_bytes());
 ```
 
-## 如何将bytes转成int
+## 如何将Bytes转成数字
 
 ```rust
-
+let bytes: [u8; 5] = [22,33,44,55,66];
+println!(u32::from_be_bytes(bytes));
 ```
-
+---
 # 加解密
+## 如何进行MD5加密
+
+## 如何进行Hmac加密
+
+## 如何进行AES加解密
+
+## 如何进行RSA加解密
 
 
 
+---
 # 编码解码
+## 如何进行Base64编码
 
+## 如何进行Base64解码
 
+## 如何进行URL编码
 
+## 如何进行URL解码
+
+---
 # 实际应用
 
+## 如何启动一个HTTP服务
 
+## 如何发送一个HTTP请求
 
+---
 # 参考文献
+- [Rust程序设计语言](https://kaisery.github.io/trpl-zh-cn/)
+- [Learn Rust in Y Minutes](https://learnxinyminutes.com/docs/rust/)
 
+---
 # 贡献者
+- [Saltbo](https://github.com/saltbo)
 
 
 
