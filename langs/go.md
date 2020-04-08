@@ -6,6 +6,32 @@ How to do something during rust developing.
 
 # 基础
 
+这里罗列了Golang最基本的东西
+
+## 基础类型
+
+| 符号   | 长度      | 值范围 |
+| ----- | --------- | ------ |
+| bool     | 64-bit | true~false |
+| uint8    | 8-bit  | 0~255 |
+| uint16   | 16-bit | 0~65535 |
+| uint32   | 32-bit | 0~4294967295 |
+| uint64   | 64-bit | 0~18446744073709551615 |
+| int8     | 8-bit  | -128~127 |
+| int16    | 16-bit | -32768~32767 |
+| int32    | 32-bit | -2147483648~2147483647 |
+| int64    | 64-bit | -9223372036854775808~9223372036854775807 |
+| float32  | 32-bit | - |
+| float64  | 64-bit | - |
+| string   | 8-bit  | - |
+| int      | 32-bit | -2147483648~2147483647 |
+| uint     | 32-bit | 0~4294967295|
+| uintptr  | 32-bit | - |
+| byte     | 8-bit  | 0~255 |
+| rune     | 32-bit | -2147483648~2147483647 |
+
+
+
 ## 如何输出打印
 
 
@@ -52,13 +78,15 @@ How to do something during rust developing.
 
 ## 如何将int转成bytes
 
-```rust
-u32::to_be_bytes();
+```golang
+
 ```
 
 ## 如何将bytes转成int
 
+```golang
 
+```
 
 ## 如何将
 
